@@ -44,7 +44,9 @@ public class Main {
 
             //insertar un dato
             Statement stInsert = conn.createStatement();
-            int rowsAffected = stInsert.executeUpdate("insert into countries (country_name) values ('Chile')");
+            //int rowsAffected = stInsert.executeUpdate("insert into countries (country_name) values ('Chile')");//esta mal porque esta hardcodeado.
+            //los parametros se ponen en el Statement. Los parametros los agregamos al string del query del
+            //statement.
             System.out.println(String.format("Rows affected : %d",rowsAffected));
 
 

@@ -1,0 +1,7 @@
+CHEQUEAR APUNTE EN EL CAMPUS!!!
+
+create trigger TDB_COUNTRIES before delete as countries for each row
+begin
+    SIGNAL_SQLSTATE '45000'
+    SET MESSAGE_TEXT = 'No podes borrar paises', MYSQL_ERRONO = 0012;
+
